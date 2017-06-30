@@ -8624,3 +8624,12 @@ footer .footer-wrapper span a:active {
   color: #b9b4b4;
 }
 
+#installatie {
+  font-size: 24px;
+  font-weight: 500;
+  width: 100%;
+  max-width: 115px;
+  border-bottom: 1px solid #ffc723;
+  margin-bottom: 30px;
+}
+

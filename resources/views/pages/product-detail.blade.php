@@ -1,10 +1,7 @@
 @extends('layouts.app')
-@section('title', '| Dé specialist in jouw favoriete gamecards!')
+@section('title', '')
 @section('description','')
-
 @section('header')
-    <link rel="stylesheet" type="text/css" href="{{asset('css/slick.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{asset('css/slick-theme.css')}}"/>
 @endsection
 @section('content')
 

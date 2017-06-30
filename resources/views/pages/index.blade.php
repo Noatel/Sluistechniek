@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '| Dé specialist in jouw favoriete gamecards!')
+@section('title', '')
 @section('description','')
 
 @section('header')

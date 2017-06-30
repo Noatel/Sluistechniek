@@ -19,6 +19,10 @@ Route::get('/producten/1', function () {
     return view('pages.product-detail');
 });
 
+Route::get('/installatie', function () {
+    return view('pages.installatie');
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
