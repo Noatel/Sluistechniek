@@ -1,0 +1,17 @@
+.product-detail {
+  max-width: 389px;
+  h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $black;
+  }
+  span {
+    font-size: 18px;
+    font-weight: bold;
+    color: $black;
+  }
+  p {
+    font-size: 14px;
+    color: $pinkish-grey;
+  }
+}

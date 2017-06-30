@@ -8,8 +8,7 @@
 @endsection
 @section('content')
 
-    <div class="space-50"></div>
-    <div class="space-50"></div>
+    <div class="space-100"></div>
     <div id="home">
         <div class="circles"></div>
 

@@ -14,6 +14,12 @@
 Route::get('/', 'PageController@index');
 
 
+//test route
+Route::get('/producten/1', function () {
+    return view('pages.product-detail');
+});
+
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
