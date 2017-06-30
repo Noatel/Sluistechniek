@@ -1,0 +1,37 @@
+.circles {
+  text-indent: -9999px;
+  width: 600px;
+  height: 400px;
+  background: url(/images/circles-2.svg);
+  background-size: 600px 400px;
+  position: absolute;
+  left: -150px;
+
+}
+
+#homepage_camera {
+  position: relative;
+  bottom: 10px;
+}
+
+.home-text {
+  h1 {
+    color: #333333;
+  }
+  p {
+    color: #b9b4b4;
+    font-size: 14px;
+  }
+  max-width: 389px;
+}
+
+#home-carousel {
+  span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffc723;
+  }
+  img {
+    padding: 40px;
+  }
+}
