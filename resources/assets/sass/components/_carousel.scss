@@ -1,0 +1,26 @@
+.slick-prev:before, .slick-next:before {
+  color: black !important;
+}
+
+.slick-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1336;
+}
+
+.slick-right {
+  position: absolute;
+  bottom: 43%;
+  right: 0;
+  z-index: 1336;
+
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
+.slick-list{
+  position: relative;
+}

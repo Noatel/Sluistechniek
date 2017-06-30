@@ -8454,11 +8454,13 @@ body {
 
 #homepage_camera {
   position: relative;
+  margin: 0 auto;
+  display: block;
   bottom: 10px;
 }
 
 .home-text {
-  max-width: 389px;
+  max-width: 420px;
 }
 
 .home-text h1 {
@@ -8470,13 +8472,131 @@ body {
   font-size: 14px;
 }
 
-#home-carousel span {
+#home-carousel .span-align {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+#home-carousel .span-align span {
   font-size: 14px;
   font-weight: bold;
   color: #ffc723;
 }
 
+#home-carousel ul {
+  text-align: center;
+}
+
+#home-carousel li {
+  text-align: left;
+}
+
 #home-carousel img {
-  padding: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-wrapper {
+  background-color: #f3f3f3;
+  width: 100%;
+}
+
+.home-wrapper .text-wrapper {
+  text-align: center;
+  width: 100%;
+  color: #333333;
+}
+
+.home-wrapper .text-wrapper h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.home-installatie {
+  color: #333333;
+}
+
+.home-installatie h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.home-installatie p {
+  color: #b9b4b4;
+}
+
+footer {
+  background-color: #f3f3f3;
+}
+
+footer ul li {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+  list-style: none;
+}
+
+footer ul li ul {
+  padding: 0;
+}
+
+footer ul li ul li {
+  font-size: 12px;
+  color: #333333;
+  list-style: none;
+}
+
+footer ul li ul li a,
+footer ul li ul li a:hover,
+footer ul li ul li a:active {
+  color: black;
+}
+
+footer .footer-wrapper {
+  text-align: center;
+}
+
+footer .footer-wrapper span {
+  font-size: 10px;
+  color: #333333;
+}
+
+footer .footer-wrapper span a,
+footer .footer-wrapper span a:hover,
+footer .footer-wrapper span a:active {
+  color: black;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.slick-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1336;
+}
+
+.slick-right {
+  position: absolute;
+  bottom: 43%;
+  right: 0;
+  z-index: 1336;
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
+.slick-list {
+  position: relative;
 }
 

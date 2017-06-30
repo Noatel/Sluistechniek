@@ -11,27 +11,75 @@
 
 #homepage_camera {
   position: relative;
+  margin: 0 auto;
+  display: block;
   bottom: 10px;
 }
 
 .home-text {
   h1 {
-    color: #333333;
+    color: $black;
   }
   p {
-    color: #b9b4b4;
+    color: $pinkish-grey;
     font-size: 14px;
   }
-  max-width: 389px;
+  max-width: 420px;
 }
 
 #home-carousel {
-  span {
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffc723;
+
+  .span-align {
+    padding-left:20px;
+    margin-bottom:10px;
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      color: $golden-yellow;
+    }
+  }
+  ul {
+    text-align: center;
+  }
+  li {
+    text-align: left;
   }
   img {
-    padding: 40px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.home-wrapper {
+  background-color: $grey;
+  width: 100%;
+  .text-wrapper {
+    text-align: center;
+    width: 100%;
+    color: $black;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.home-installatie {
+
+  color: $black;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  p {
+    color: $pinkish-grey;
   }
 }
