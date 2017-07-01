@@ -57,8 +57,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li {{ Request::is('/') ? 'class=active' : '' }}><a href="{{url('/')}}">Home</a></li>
 
-                    <li {{ Request::is('producten') ? 'class=active' : '' }}><a
-                                href="{{url('/producten')}}">Producten</a></li>
+                    <li {{ Request::is('producten/1') ? 'class=active' : '' }}><a
+                                href="{{url('/producten/1')}}">Producten</a></li>
                     <li {{ Request::is('installatie') ? 'class=active' : '' }}><a href="{{url('/installatie')}}">Installatie</a>
                     </li>
                     <li {{ Request::is('contact') ? 'class=active' : '' }}><a href="{{url('/contact')}}">Contact</a>
