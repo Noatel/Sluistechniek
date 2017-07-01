@@ -30,8 +30,8 @@
 #home-carousel {
 
   .span-align {
-    padding-left:20px;
-    margin-bottom:10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
     span {
       font-size: 14px;
       font-weight: bold;
@@ -74,15 +74,10 @@
 
   color: $black;
 
-  h2 {
-    font-size: 24px;
-    font-weight: 500;
-    width:100%;
-    max-width:350px;
-    border-bottom: 1px solid $golden-yellow;
-    margin-bottom: 30px;
-  }
   p {
+    max-width: 488px;
+
     color: $pinkish-grey;
   }
+
 }

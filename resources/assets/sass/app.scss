@@ -17,6 +17,22 @@ body {
   height: 100%;
   font-family: 'Poppins', sans-serif;
 }
+.heading {
+  border-bottom: 2px solid $grey;
+  display: block;
+  margin: 10px 0 25px 0;
+
+  h2,h1 {
+    display: inline-block;
+    margin: 0 0 -2px 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: $black;
+
+    padding-bottom: 5px;
+    border-bottom: 2px solid $golden-yellow;
+  }
+}
 
 @import "components/navbar";
 @import "components/spaces";
@@ -25,3 +41,4 @@ body {
 @import "components/carousel";
 @import "pages/product-detail";
 @import "pages/installatie";
+@import "pages/contact";

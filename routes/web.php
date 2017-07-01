@@ -22,6 +22,9 @@ Route::get('/producten/1', function () {
 Route::get('/installatie', function () {
     return view('pages.installatie');
 });
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
 
 
 Route::group(['prefix' => 'admin'], function () {

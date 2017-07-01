@@ -120,8 +120,10 @@
     <div class="space-100"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-5 home-installatie">
-                <h2>Installatie door Sluistechniek</h2>
+            <div class="col-md-7 home-installatie">
+                <div class="heading">
+                    <h2 class="heading-title">Installatie door Sluistechniek</h2>
+                </div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa eius et exercitationem fugiat hic
                     illum ipsa, itaque officia omnis, quam quia ratione suscipit velit voluptatem! Aliquid ipsam magni
@@ -134,7 +136,7 @@
                     qui ratione sit velit?
                 </p>
             </div>
-            <div class="col-md-4 col-md-offset-2">
+            <div class="col-md-4 col-md-offset-1">
                 <div class="space-70"></div>
                 <img src="{{asset('images/camera4.png')}}" alt="">
             </div>

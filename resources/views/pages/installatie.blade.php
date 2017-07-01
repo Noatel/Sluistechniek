@@ -9,18 +9,20 @@
     <div class="space-100"></div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 id="installatie">Installatie</h1>
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-md-4">
+                <div class="heading">
+                    <h1 id="installatie">Installatie</h1>
+                </div>
+
                 <img src="{{asset('images/camera3.png')}}" class="img-responsive" alt="">
                 <div class="space-30"></div>
                 <img src="{{asset('images/camera3.png')}}" class="img-responsive" alt="">
             </div>
             <div class="col-md-4">
+                <div class="space-70"></div>
+
                 <div class="hidden-md hidden-lg"> <div class="space-50"></div></div>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsum non quae. Accusamus autem
                     consequatur
@@ -39,6 +41,8 @@
                     nemo sint sunt.</p>
             </div>
             <div class="col-md-4">
+                <div class="space-70"></div>
+
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias consequuntur delectus
                     dignissimos distinctio doloremque eius esse, illum inventore labore laboriosam nam nemo nobis quae
