@@ -40,11 +40,9 @@
 
 <div class="main-wrapper">
     <div class="header clearfix">
-        <nav class="navbar navbar-main " role="navigation">
+        <nav class="navbar navbar-main navbar-collapse " role="navigation">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

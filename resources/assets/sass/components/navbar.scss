@@ -14,8 +14,28 @@
       a {
         font-size: 14px;
         color: #333333;
+        &:hover,&:focus{
+          background-color: white;
+        }
       }
     }
   }
 
+}
+@media (min-width: 768px) and (max-width: 1004px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+  .navbar-header .collapse, .navbar-toggle {
+    display:block !important;
+  }
+  .navbar-header {
+    float:none;
+  }
+}
+.navbar-toggle{
+  z-index:1337;
 }
