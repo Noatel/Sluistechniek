@@ -53,6 +53,16 @@
                             <li>25x optische zoom</li>
                             <li>Wifi en NRC</li>
                         </ul>
+                         <div class="row">
+                            <div class="space-20"></div>
+                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <form action="{{url('/product/1')}}">
+                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>  <div class="item">
                         <img src="{{asset('images/camera2.png')}}" alt="">
                         <div class="span-align">
@@ -63,6 +73,16 @@
                             <li>25x optische zoom</li>
                             <li>Wifi en NRC</li>
                         </ul>
+                        <div class="row">
+                            <div class="space-20"></div>
+                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <form action="{{url('/product/1')}}">
+                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>  <div class="item">
                         <img src="{{asset('images/camera2.png')}}" alt="">
                         <div class="span-align">
@@ -73,6 +93,16 @@
                             <li>25x optische zoom</li>
                             <li>Wifi en NRC</li>
                         </ul>
+                        <div class="row">
+                            <div class="space-20"></div>
+                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <form action="{{url('/product/1')}}">
+                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>  <div class="item">
                         <img src="{{asset('images/camera2.png')}}" alt="">
                         <div class="span-align">
@@ -83,6 +113,16 @@
                             <li>25x optische zoom</li>
                             <li>Wifi en NRC</li>
                         </ul>
+                        <div class="row">
+                            <div class="space-20"></div>
+                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <form action="{{url('/product/1')}}">
+                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div class="item">
                         <img src="{{asset('images/camera2.png')}}" alt="">
@@ -94,6 +134,16 @@
                                 <li>25x optische zoom</li>
                                 <li>Wifi en NRC</li>
                             </ul>
+                        <div class="row">
+                            <div class="space-20"></div>
+                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <form action="{{url('/product/1')}}">
+                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                </form>
+                            </div>
+                        </div>
                         </div>
                 </div>
 

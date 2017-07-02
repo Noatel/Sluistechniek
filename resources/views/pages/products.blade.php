@@ -62,9 +62,9 @@
                         </div>
                         <div class="row">
                             <div class="space-20"></div>
-                            <div class="col-md-3 col-sm-6"><span class="price">&#8364; 129</span>
+                            <div class="col-md-3 col-xs-6"><span class="price">&#8364; 129</span>
                             </div>
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-md-3 col-xs-6">
                                 <form action="{{url('/product/1')}}">
                                     <button type="submit" class="btn btn-custom">Bekijk product</button>
                                 </form>
