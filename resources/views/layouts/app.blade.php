@@ -27,12 +27,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
 
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
     @yield('header')
 </head>
@@ -42,7 +44,8 @@
     <div class="header clearfix">
         <nav class="navbar navbar-main navbar-collapse " role="navigation">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle toggle-closed" data-toggle="collapse"
+                        data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -51,17 +54,23 @@
                     <span>Sluistechniek</span>
                 </a>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li {{ Request::is('/') ? 'class=active' : '' }}><a href="{{url('/')}}">Home</a></li>
 
-                    <li {{ Request::is('producten/1') ? 'class=active' : '' }}><a
-                                href="{{url('/producten/1')}}">Producten</a></li>
-                    <li {{ Request::is('installatie') ? 'class=active' : '' }}><a href="{{url('/installatie')}}">Installatie</a>
-                    </li>
-                    <li {{ Request::is('contact') ? 'class=active' : '' }}><a href="{{url('/contact')}}">Contact</a>
-                    </li>
-                </ul>
+            <div class="links  fade-nav" id="myNavbar">
+                <div class="nav-wrapper">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="list-fade {{ Request::is('/') ? "active" : '' }}"><a
+                                    href="{{url('/')}}">Home</a></li>
+
+                        <li class="list-fade {{ Request::is('producten/1') ? "active" : '' }}"><a
+                                    href="{{url('/producten')}}">Producten</a></li>
+                        <li class="list-fade {{ Request::is('installatie') ? "active" : '' }}"><a
+                                    href="{{url('/installatie')}}">Installatie</a>
+                        </li>
+                        <li class="list-fade {{ Request::is('contact') ? "active" : '' }}"><a
+                                    href="{{url('/contact')}}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>
@@ -77,5 +86,31 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 @yield('scripts')
+<script>
+    $('.navbar-toggle').on('click', function () {
+        if ($(this).hasClass('toggle-closed')) {
+            $('.fade-nav').fadeIn();
+            $('.list-fade').hide().each(function (i) {
+                slow = (i) * 420;
+                setTimeout(function (div) {
+                    div.show().addClass('animated bounceInLeft');
+                }, slow, $(this));
+            });
+            $(this).removeClass('toggle-closed');
+            $(this).addClass('toggle-open');
+            $('body').addClass('scroll-lock');
+            $(this).find('i').removeClass('icon-menu');
+            $(this).find('i').addClass('icon-close');
+        }
+        else {
+            $('body').removeClass('scroll-lock');
+            $('.fade-nav').fadeOut();
+            $(this).removeClass('toggle-open');
+            $(this).addClass('toggle-closed');
+            $(this).find('i').removeClass('icon-close');
+            $(this).find('i').addClass('icon-menu');
+        }
+    });
+</script>
 </body>
 </html>

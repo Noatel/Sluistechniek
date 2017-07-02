@@ -109,7 +109,7 @@
             <div class="text-wrapper">
                 <div class="space-30"></div>
                 <div class="space-50"></div>
-                <h2>Bevelig uw huis met SluisTechniek</h2>
+                <h2>Beveiliging uw huis met SluisTechniek</h2>
                 <p>Sluistechniek kan ook de installatie verzorgen</p>
                 <div class="space-50"></div>
                 <div class="space-30"></div>

@@ -15,13 +15,14 @@
                 <div class="heading">
                     <h1 id="installatie">Installatie</h1>
                 </div>
+                <div class="space-20"></div>
 
                 <img src="{{asset('images/camera3.png')}}" class="img-responsive" alt="">
                 <div class="space-30"></div>
                 <img src="{{asset('images/camera3.png')}}" class="img-responsive" alt="">
             </div>
             <div class="col-md-4">
-                <div class="space-70"></div>
+                <div class="space-80"></div>
 
                 <div class="hidden-md hidden-lg"> <div class="space-50"></div></div>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsum non quae. Accusamus autem
@@ -41,7 +42,7 @@
                     nemo sint sunt.</p>
             </div>
             <div class="col-md-4">
-                <div class="space-70"></div>
+                <div class="space-80"></div>
 
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias consequuntur delectus

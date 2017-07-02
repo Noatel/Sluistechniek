@@ -1,0 +1,48 @@
+.products-list {
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: $black;
+  }
+
+  .product {
+    h2 {
+      font-size: 15px;
+      font-weight: bold;
+      color: $black;
+    }
+    p {
+      font-size: 14px;
+      color: $black;
+
+    }
+  }
+  .price{
+    position: relative;
+    top:5px;
+    font-weight: bold;
+  }
+}
+
+.products-filter {
+  font-size: 18px;
+  font-weight: 500;
+  color: $black;
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $black;
+  }
+}
+
+.round {
+  background-image: linear-gradient(to bottom, $golden-yellow, $golden-yellow) !important;
+}
+
+.slider-track-low, .slider-track-high {
+  background-color: $white-two !important;
+}
+
+.slider-selection {
+  background-image: linear-gradient(to bottom, $white-two, $white-two) !important;;
+}
