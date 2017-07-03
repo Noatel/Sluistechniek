@@ -19,7 +19,7 @@
                 </div>
                 <div class="space-100 hidden-md hidden-lg"></div>
 
-                <div class="col-md-5 col-md-offset-1 col-sm-offset-0 col-sm-6 col-xs-12 ">
+                <div class="col-md-5 col-md-offset-1  col-sm-10 col-sm-offset-2 col-xs-12 ">
                     <div class="home-text">
                         <h1>High quality camera's</h1>
                         <div class="space-10"></div>

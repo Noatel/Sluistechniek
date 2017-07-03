@@ -55,7 +55,7 @@
                 </a>
             </div>
 
-            <div class="links  fade-nav" id="myNavbar">
+            <div class="links fade-nav" id="myNavbar">
                 <div class="nav-wrapper">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="list-fade {{ Request::is('/') ? "active" : '' }}"><a

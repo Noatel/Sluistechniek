@@ -2,7 +2,7 @@
     <div class="container">
         <div class="space-30"></div>
         <div class="row">
-            <div class="col-md-6 ">
+            <div class="col-md-6 col-sm-6 col-xs-6">
                 <ul>
                     <li>
                         Sitemap
@@ -16,7 +16,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3 col-md-push-3">
+            <div class="col-md-3  col-xs-6 col-sm-3 col-sm-push-1 col-md-push-3">
                 <ul>
                     <li>
                         Over Sluistechniek

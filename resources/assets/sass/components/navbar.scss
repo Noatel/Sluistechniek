@@ -1,5 +1,5 @@
 .navbar {
-  margin: 50px 100px 0 100px;
+  margin: 50px 0 0 0;
   .navbar-brand {
     span {
       font-size: 18px;
@@ -20,7 +20,14 @@
       }
     }
   }
+}
 
+@media (min-width: 1034px) {
+  .collapse
+  ,
+  .navbar-collapse.collapse {
+    position: relative !important;
+  }
 }
 
 @media (max-width: 1034px) {
@@ -74,14 +81,9 @@
       left: 0;
       right: 0;
       ul {
-        display: inline-block;
+        display: block;
         height: 20px;
-        margin-bottom: 0;
-        margin-left: 80px;
-        @media(max-width: 992px) {
-          margin-left: 20px;
-        }
-        margin-right: 60px;
+        margin: 0 auto;
         padding-left: 0;
 
         li {
@@ -153,9 +155,9 @@
 }
 
 .active {
-a{
-  color: $golden-yellow !important;
+  a {
+    color: $golden-yellow !important;
 
-}
+  }
 }
 

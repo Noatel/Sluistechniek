@@ -58,7 +58,7 @@
                         <div class="space-20"></div>
                         <div class="row">
                             <div class="col-md-2">
-                                <button type="button" class="btn btn-primary">Verzenden</button>
+                                <button type="button" class="btn btn-custom">Verzenden</button>
                             </div>
                         </div>
                     </div>

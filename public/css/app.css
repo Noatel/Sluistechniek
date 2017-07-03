@@ -8391,7 +8391,7 @@ body {
 }
 
 .navbar {
-  margin: 50px 100px 0 100px;
+  margin: 50px 0 0 0;
 }
 
 .navbar .navbar-brand span {
@@ -8413,6 +8413,13 @@ body {
 .navbar ul li a:hover,
 .navbar ul li a:focus {
   background-color: white;
+}
+
+@media (min-width: 1034px) {
+  .collapse,
+  .navbar-collapse.collapse {
+    position: relative !important;
+  }
 }
 
 @media (max-width: 1034px) {
@@ -8483,22 +8490,12 @@ body {
   }
 
   .links .nav-wrapper ul {
-    display: inline-block;
+    display: block;
     height: 20px;
-    margin-bottom: 0;
-    margin-left: 80px;
-    margin-right: 60px;
+    margin: 0 auto;
     padding-left: 0;
   }
-}
 
-@media (max-width: 1034px) and (max-width: 992px) {
-  .links .nav-wrapper ul {
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 1034px) {
   .links .nav-wrapper ul li {
     display: block;
     width: 300px;
