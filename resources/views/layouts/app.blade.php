@@ -44,8 +44,7 @@
     <div class="header clearfix">
         <nav class="navbar navbar-main navbar-collapse " role="navigation">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle toggle-closed" data-toggle="collapse"
-                        data-target="#myNavbar">
+                <button type="button" class="navbar-toggle toggle-closed" data-toggle="collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -55,7 +54,7 @@
                 </a>
             </div>
 
-            <div class="links fade-nav" id="myNavbar">
+            <div class="links" id="myNavbar">
                 <div class="nav-wrapper">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="list-fade {{ Request::is('/') ? "active" : '' }}"><a
@@ -89,7 +88,7 @@
 <script>
     $('.navbar-toggle').on('click', function () {
         if ($(this).hasClass('toggle-closed')) {
-            $('.fade-nav').fadeIn();
+            $('.links').fadeIn();
             $('.list-fade').hide().each(function (i) {
                 slow = (i) * 420;
                 setTimeout(function (div) {
@@ -101,16 +100,31 @@
             $('body').addClass('scroll-lock');
             $(this).find('i').removeClass('icon-menu');
             $(this).find('i').addClass('icon-close');
+
         }
         else {
             $('body').removeClass('scroll-lock');
-            $('.fade-nav').fadeOut();
+            $('.links').fadeOut();
             $(this).removeClass('toggle-open');
             $(this).addClass('toggle-closed');
             $(this).find('i').removeClass('icon-close');
             $(this).find('i').addClass('icon-menu');
+
         }
     });
+
+    function checkWidth() {
+        var windowsize = $(window).width();
+        if (windowsize > 1034) {
+            $('.links').show();
+        } else {
+            $('.links').hide();
+        }
+    }
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
 </script>
 </body>
 </html>
