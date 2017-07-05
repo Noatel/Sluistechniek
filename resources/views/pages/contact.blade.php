@@ -33,32 +33,34 @@
                     </h1>
                 </div>
                 <div class="space-20"></div>
-                <form>
+                <form action="{{url('/email')}}" method="post">
+                    {{csrf_field()}}
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-8">
                                 <label for="name">Naam <span>*</span></label>
-                                <input type="text" required class="form-control" id="name" aria-describedby="emailHelp"
+                                <input name="name" type="text" required class="form-control" id="name"
+                                       aria-describedby="emailHelp"
                                        placeholder="Naam">
                                 <div class="space-20"></div>
                                 <label for="email">Email <span>*</span></label>
-                                <input type="email" required class="form-control" id="name" aria-describedby="emailHelp"
+                                <input name="email"  type="email" required class="form-control" id="name"
+                                       aria-describedby="emailHelp"
                                        placeholder="Email">
                                 <div class="space-20"></div>
-
 
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="exampleTextarea">Bericht</label>
-                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                <textarea name="message" class="form-control" id="exampleTextarea" rows="3"></textarea>
                             </div>
                         </div>
                         <div class="space-20"></div>
                         <div class="row">
                             <div class="col-md-2">
-                                <button type="button" class="btn btn-custom">Verzenden</button>
+                                <button type="submit" class="btn btn-custom">Verzenden</button>
                             </div>
                         </div>
                     </div>
@@ -73,20 +75,20 @@
                 <div class="space-20"></div>
 
                 <div class="contact-info">
-                <p>
-                    Vul linksstaand formulier in om
-                    een offerte aan te vragen, of neem
-                    contact op via onderstaande
-                    gegevens,
-                </p>
-                <div class="space-20"></div>
+                    <p>
+                        Vul linksstaand formulier in om
+                        een offerte aan te vragen, of neem
+                        contact op via onderstaande
+                        gegevens,
+                    </p>
+                    <div class="space-20"></div>
 
-                <ul class="no-padding">
-                    <li>Capelle aan den IJssel</li>
-                    <li>Gruttosingel 55</li>
-                    <li>06-29382003</li>
-                    <li><a href="mailto:info@sluistechniek.nl">info@sluistechniek.nl</a></li>
-                </ul>
+                    <ul class="no-padding">
+                        <li>Capelle aan den IJssel</li>
+                        <li>Gruttosingel 55</li>
+                        <li>06-29382003</li>
+                        <li><a href="mailto:info@sluistechniek.nl">info@sluistechniek.nl</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

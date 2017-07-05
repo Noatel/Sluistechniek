@@ -13,23 +13,19 @@
 
 Route::get('/', 'PageController@index');
 
+Route::get('/producten', 'ProductController@index');
+Route::post('/producten/search', 'ProductController@search');
+Route::get('/product/{product}', 'ProductController@view');
 
-//test route
-Route::get('/product/1', function () {
-    return view('pages.product-detail');
-});
 
-Route::get('/producten', function () {
-    return view('pages.products');
-});
+Route::get('/installatie', 'PageController@install');
+Route::get('/contact', 'PageController@contact');
+Route::post('/email', 'PageController@email');
 
-Route::get('/installatie', function () {
-    return view('pages.installatie');
-});
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
 
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 
 Route::group(['prefix' => 'admin'], function () {

@@ -15,23 +15,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="{{asset('images/camera.png')}}" id="homepage_camera" alt="Camera">
+                    <img src="{{asset('/storage/'. $blocks[0]->image)}}" class="img-responsive" id="homepage_camera" alt="Camera">
                 </div>
                 <div class="space-100 hidden-md hidden-lg"></div>
 
                 <div class="col-md-5 col-md-offset-1  col-sm-10 col-sm-offset-2 col-xs-12 ">
                     <div class="home-text">
-                        <h1>High quality camera's</h1>
+                        <h1>{!! $blocks[0]->title !!}</h1>
                         <div class="space-10"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus
-                            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
-                            massa
-                            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                            justo,
-                            rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                            Integer tincidunt</p>
+                        {!! $blocks[0]->body !!}
                     </div>
                 </div>
             </div>
@@ -43,108 +35,34 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="slick" id="home-carousel">
-                    <div class="item">
-                        <img src="{{asset('images/camera2.png')}}" alt="">
-                        <div class="span-align">
-                            <span>Canon powershot SX620</span>
-                        </div>
-                        <ul>
-                            <li>21,6 megapixel CMOS Sensor</li>
-                            <li>25x optische zoom</li>
-                            <li>Wifi en NRC</li>
-                        </ul>
-                         <div class="row">
-                            <div class="space-20"></div>
-                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
-                            </div>
-                            <div class="col-md-4 col-xs-6">
-                                <form action="{{url('/product/1')}}">
-                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>  <div class="item">
-                        <img src="{{asset('images/camera2.png')}}" alt="">
-                        <div class="span-align">
-                            <span>Canon powershot SX620</span>
-                        </div>
-                        <ul>
-                            <li>21,6 megapixel CMOS Sensor</li>
-                            <li>25x optische zoom</li>
-                            <li>Wifi en NRC</li>
-                        </ul>
-                        <div class="row">
-                            <div class="space-20"></div>
-                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
-                            </div>
-                            <div class="col-md-4 col-xs-6">
-                                <form action="{{url('/product/1')}}">
-                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>  <div class="item">
-                        <img src="{{asset('images/camera2.png')}}" alt="">
-                        <div class="span-align">
-                            <span>Canon powershot SX620</span>
-                        </div>
-                        <ul>
-                            <li>21,6 megapixel CMOS Sensor</li>
-                            <li>25x optische zoom</li>
-                            <li>Wifi en NRC</li>
-                        </ul>
-                        <div class="row">
-                            <div class="space-20"></div>
-                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
-                            </div>
-                            <div class="col-md-4 col-xs-6">
-                                <form action="{{url('/product/1')}}">
-                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>  <div class="item">
-                        <img src="{{asset('images/camera2.png')}}" alt="">
-                        <div class="span-align">
-                            <span>Canon powershot SX620</span>
-                        </div>
-                        <ul>
-                            <li>21,6 megapixel CMOS Sensor</li>
-                            <li>25x optische zoom</li>
-                            <li>Wifi en NRC</li>
-                        </ul>
-                        <div class="row">
-                            <div class="space-20"></div>
-                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
-                            </div>
-                            <div class="col-md-4 col-xs-6">
-                                <form action="{{url('/product/1')}}">
-                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="{{asset('images/camera2.png')}}" alt="">
+                    @forelse($products as $product)
+                        <div class="item">
+                            <img class="item-image img-responsive" src="{{asset('/storage/'.$product->image)}}" alt="">
                             <div class="span-align">
-                            <span>Canon powershot SX620</span>
-                            </div>
-                            <ul>
-                                <li>21,6 megapixel CMOS Sensor</li>
-                                <li>25x optische zoom</li>
-                                <li>Wifi en NRC</li>
-                            </ul>
-                        <div class="row">
-                            <div class="space-20"></div>
-                            <div class="col-md-4 col-xs-6 col-md-offset-1"><span class="price">&#8364; 129</span>
-                            </div>
-                            <div class="col-md-4 col-xs-6">
-                                <form action="{{url('/product/1')}}">
-                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
-                                </form>
+                                <div class="space-30"></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>{{$product->name}}</span>
+                                        <p>
+                                            {{$product->description}}
+                                        </p>
+                                        <div class="row">
+                                            <div class="space-20"></div>
+                                            <div class="col-xs-5"><span
+                                                        class="price">&#8364; {{$product->price}}</span>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <form action="{{url('/product/'. $product->id)}}">
+                                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
+                    @empty
+                    @endforelse
                 </div>
 
 
@@ -172,23 +90,13 @@
         <div class="row">
             <div class="col-md-7 home-installatie">
                 <div class="heading">
-                    <h2 class="heading-title">Installatie door Sluistechniek</h2>
+                    <h2 class="heading-title">{!! $blocks[1]->title !!}</h2>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa eius et exercitationem fugiat hic
-                    illum ipsa, itaque officia omnis, quam quia ratione suscipit velit voluptatem! Aliquid ipsam magni
-                    voluptate
-                    Lorem ipsum dolor sit amet <br> <br> consectetur adipisicing elit. Ab aliquid architecto consequatur
-                    consequuntur cumque delectus, hic id illo inventore, nihil nisi quidem quos ratione rerum sint ut
-                    vel voluptates voluptatibus.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores debitis dolores eligendi esse
-                    nam obcaecati omnis perspiciatis quia! Accusamus, animi consequatur delectus eaque ipsa numquam quae
-                    qui ratione sit velit?
-                </p>
+               {!! $blocks[1]->body !!}
             </div>
             <div class="col-md-4 col-md-offset-1">
                 <div class="space-70"></div>
-                <img src="{{asset('images/camera4.png')}}" alt="">
+                <img src="{{asset('/storage/'. $blocks[1]->image)}}" class="img-responsive" alt="Camera">
             </div>
         </div>
     </div>

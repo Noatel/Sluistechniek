@@ -15,66 +15,72 @@
                         <div class="space-10"></div>
                         <h4>Filters</h4>
                         <div class="space-30"></div>
-                        <div class="form-group">
-                            <label for="usr">Naam</label>
-                            <input type="text" class="form-control" placeholder="Naam" id="usr">
-                        </div>
+                        <form action="{{url('producten/search')}}" method="post">
+                            {{csrf_field()}}
+                            <div class="form-group">
+                                <label for="usr">Naam</label>
+                                <input type="text" name="name" class="form-control" placeholder="Naam" id="usr">
+                            </div>
 
-                        <div class="space-30"></div>
-                        <label for="slider">Prijs</label> <br>
-                        <b>€ 0</b> <b class="pull-right">€ 1000</b>
+                            <div class="space-30"></div>
+                            <label for="slider">Prijs</label> <br>
+                            <b>€ 0</b> <b class="pull-right">€ 1000</b>
 
-                        <br>
-                        <input id="ex2" type="text" class="span2" value="" data-slider-min="0" style="width:100%"
-                               data-slider-max="1000" data-slider-step="5" data-slider-value="[0,450]"/>
+                            <br>
+                            <input id="ex2" type="text" class="span2" name="slider" value="" data-slider-min="0"
+                                   style="width:100%"
+                                   data-slider-max="1000" data-slider-step="5" data-slider-value="[0,450]"/>
 
-                        <div class="space-50"></div>
-                        <button type="button" class="btn btn-custom">Zoeken</button>
+                            <div class="space-50"></div>
+                            <button type="button" id="search" class="btn btn-custom">Zoeken</button>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 col-md-offset-1 products-list">
-                <h3>Producten (1)</h3>
+                <h3>Producten (<span id="number">{!! $count !!}</span>)</h3>
 
                 <hr>
                 <div class="space-30"></div>
-
-                <div class="row">
-                    <div class="col-md-5 ">
-                        <img src="{{asset('images/camera3.png')}}" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-md-7 col-md-offset-0 col-xs-offset-1">
-                        <div class="product">
-                            <div class="hidden-md hidden-lg">
-                                <div class="space-50"></div>
-                            </div>
-                            <h2>Panasonic Lumix DMC-SZ10 Zwart </h2>
-                            <div class="space-20"></div>
-
-                            <p>Keep an eye on your little one with the DCS-825L Wi-Fi Baby Camera. This portable camera
-                                transforms your mobile device into a versatile, yet easy to use baby monitor.</p>
-                            <ul>
-                                <li>21,6 megapixel CMOS censor</li>
-                                <li>25x optische zoom</li>
-                                <li>Wifi en NFC</li>
-
-                            </ul>
-                        </div>
-                        <div class="row">
-                            <div class="space-20"></div>
-                            <div class="col-md-3 col-xs-6"><span class="price">&#8364; 129</span>
-                            </div>
-                            <div class="col-md-3 col-xs-6">
-                                <form action="{{url('/product/1')}}">
-                                    <button type="submit" class="btn btn-custom">Bekijk product</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                <div id='loadingmessage' style='display:none;    margin-left: 50%;margin-bottom:20px'>
+                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                 </div>
-                <div class="space-30"></div>
 
-                <hr>
+                <div id="products">
+                    @forelse($products as $product)
+                        <div class="row">
+                            <div class="col-md-5 ">
+                                <img src="{{asset('/storage/'.$product->image)}}" class="img-responsive" alt="">
+                            </div>
+                            <div class="col-md-7 col-md-offset-0 col-xs-offset-1">
+                                <div class="product">
+                                    <div class="hidden-md hidden-lg">
+                                        <div class="space-50"></div>
+                                    </div>
+                                    <h2>{{$product->name}}</h2>
+                                    <div class="space-20"></div>
+                                    <p>{{$product->description}}</p>
+                                </div>
+                                <div class="row">
+                                    <div class="space-20"></div>
+                                    <div class="col-md-3 col-xs-6"><span
+                                                class="price">&#8364; {{$product->price}}</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-6">
+                                        <form action="{{url('/product/'. $product->id)}}">
+                                            <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-30"></div>
+
+                        <hr>
+                    @empty
+
+                    @endforelse
+                </div>
             </div>
         </div>
     </div>
@@ -89,5 +95,53 @@
     <script src="{{asset('js/bootstrap-slider.js')}}"></script>
     <script>
         $("#ex2").slider({});
+        $("#search").on('click', function () {
+            $("#products").empty();
+
+            $('#loadingmessage').show();  // show the loading message.
+
+            $.post("/producten/search",
+                    {
+                        _token: "{{csrf_token()}}",
+                        slider: $('#ex2').val(),
+                        name: $('#usr').val()
+                    },
+                    function (data) {
+                        $("#number").html(data.length);
+                        $.each(data, function (index) {
+                            $("#products").append('<div class="row">' +
+                                    '            <div class="col-md-5 ">' +
+                                    '            <img src="{{asset("/storage/")}}/' + data[index].image + '" class="img-responsive" alt="">' +
+                                    '            </div>' +
+                                    '            <div class="col-md-7 col-md-offset-0 col-xs-offset-1">' +
+                                    '            <div class="product">' +
+                                    '            <div class="hidden-md hidden-lg">' +
+                                    '            <div class="space-50"></div>' +
+                                    '            </div>' +
+                                    '            <h2>' + data[index].name + '</h2>' +
+                                    '            <div class="space-20"></div>' +
+                                    '            <p>' + data[index].description + '</p>' +
+                                    '            </div>' +
+                                    '            <div class="row">' +
+                                    '            <div class="space-20"></div>' +
+                                    '            <div class="col-md-3 col-xs-6"><span' +
+                                    '    class="price">&#8364; ' + data[index].price + '</span>' +
+                                    '    </div>' +
+                                    '    <div class="col-md-3 col-xs-6">' +
+                                    '        <form action="{{url('/product/')}}/' + data[index].id + '">' +
+                                    '            <button type="submit" class="btn btn-custom">Bekijk product</button>' +
+                                    '            </form>' +
+                                    '            </div>' +
+                                    '            </div>' +
+                                    '            </div>' +
+                                    '            </div>' +
+                                    '            <div class="space-30"></div>' +
+                                    '            <hr>'
+                            )
+                            ;
+                        });
+                        $('#loadingmessage').hide(); // hide the loading message
+                    });
+        })
     </script>
 @endsection
