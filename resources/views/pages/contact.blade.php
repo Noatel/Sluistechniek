@@ -13,6 +13,7 @@
         }
 
     </style>
+
     <div class="space-100"></div>
 
     <div class="container-fluid">
@@ -24,6 +25,15 @@
     </div>
     <div class="space-100"></div>
 
+    @if(Session::has('flash_message'))
+        <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+        <div class="alert alert-success"><span class="glyphicon glyphicon-ok"></span><em> Uw bericht is succesvol verzonden</em></div>
+            </div></div>
+        </div>
+    @endif
+    <div class="space-20"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-7">

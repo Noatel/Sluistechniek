@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use App\Mail\ContactMail;
 use App\Product;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Mail;
 use TCG\Voyager\Models\Page;
 
@@ -41,9 +42,9 @@ class PageController extends Controller
         $contact->description = $request->message;
         $contact->save();
 
-        Mail::to('noahtelussa@outlook.com')->send(new ContactMail($request->all()));
-        die();
-        return redirect('/')->with('status', 'Uw bericht is succesvol verzonden.');
+//        Mail::to('noahtelussa@outlook.com')->send(new ContactMail($request->all()));
+       \Session::flash('flash_message','successfully saved.');
+        return redirect()->back();
 
     }
 }
