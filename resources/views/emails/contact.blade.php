@@ -163,7 +163,7 @@
                             <ul>
                                 <li><strong>Naam:</strong> {{$name}}</li>
                                 <li><strong>Email:</strong> {{$email}}</li>
-                                <li><h3>Omschrijving:</h3>
+                                <li><strong>Omschrijving:</strong>
                                     <p>
                                         {{$description}}
                                     </p>
