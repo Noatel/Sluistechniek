@@ -42,7 +42,7 @@ class PageController extends Controller
         $contact->description = $request->message;
         $contact->save();
 
-        Mail::to('noahtelussa@outlook.com')->send(new ContactMail($request->all()));
+        Mail::to('sluistechniek@gmail.com')->send(new ContactMail($request->all()));
        \Session::flash('flash_message','successfully saved.');
         return redirect()->back();
 
