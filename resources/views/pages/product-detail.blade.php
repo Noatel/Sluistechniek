@@ -29,8 +29,10 @@
 
     <div class="space-100"></div>
     <div class="container">
-        <div class="col-md-12">
-            <p>{{$product->extra_description}}</p>
+        <div class="row">
+            <div class="col-md-12 col-xs-offset-1 col-xs-11">
+                <p>{{$product->extra_description}}</p>
+            </div>
         </div>
     </div>
     <div class="space-100"></div>
