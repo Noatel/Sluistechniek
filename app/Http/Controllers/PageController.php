@@ -14,7 +14,7 @@ class PageController extends Controller {
         $products = Product::where('homepage', '=', 1)->get();
         $footer = Page::where('id', '=', 4)->get();
         $footer = json_decode($footer);
-        $footer = $footer->body;
+        $footer = $footer[0]->body;
 
         $images = [];
 
@@ -31,7 +31,7 @@ class PageController extends Controller {
         $images = json_decode($blocks->image);
         $footer = Page::where('id', '=', 4)->get();
         $footer = json_decode($footer->body);
-        $footer = $footer->body;
+        $footer = $footer[0]->body;
 
 
 
@@ -42,7 +42,7 @@ class PageController extends Controller {
 
         $footer = Page::where('id', '=', 4)->get();
         $footer = json_decode($footer->body);
-        $footer = $footer->body;
+        $footer = $footer[0]->body;
 
 
 
