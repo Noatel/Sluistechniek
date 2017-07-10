@@ -30,7 +30,7 @@
     <div class="space-100"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-xs-offset-1 col-xs-11">
+            <div class="col-md-12 col-xs-offset-1 col-md-offset-0 col-xs-11">
                 <p>{{$product->extra_description}}</p>
             </div>
         </div>

@@ -7,6 +7,9 @@
   position: absolute;
   left: -150px;
 
+  @media only screen and (max-width: 500px) {
+      width:  500px !important;
+  }
 }
 
 #homepage_camera {

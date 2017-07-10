@@ -30,7 +30,7 @@ class PageController extends Controller {
         $blocks = Page::where('id', '=', 3)->first();
         $images = json_decode($blocks->image);
         $footer = Page::where('id', '=', 4)->get();
-        $footer = json_decode($footer->body);
+        $footer = json_decode($footer);
         $footer = $footer[0]->body;
 
 
@@ -41,7 +41,7 @@ class PageController extends Controller {
     public function contact () {
 
         $footer = Page::where('id', '=', 4)->get();
-        $footer = json_decode($footer->body);
+        $footer = json_decode($footer);
         $footer = $footer[0]->body;
 
 

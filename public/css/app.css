@@ -8621,6 +8621,12 @@ body {
   left: -150px;
 }
 
+@media only screen and (max-width: 500px) {
+  .circles {
+    width: 500px !important;
+  }
+}
+
 #homepage_camera {
   position: relative;
   margin: 0 auto;
