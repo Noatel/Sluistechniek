@@ -20,7 +20,6 @@
                 <ul>
                     <li>
                         Over Sluistechniek
-                        <div class="space-10"></div>
                         @if($footer)
                             {!! $footer !!}
                         @endif
