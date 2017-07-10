@@ -13,6 +13,8 @@ class PageController extends Controller {
         $blocks = Page::where('id', '<=', 2)->get();
         $products = Product::where('homepage', '=', 1)->get();
         $footer = Page::where('id', '=', 4)->get();
+        $footer = json_decode($footer->body);
+
         $images = [];
 
         foreach ($blocks as $i => $key) {
@@ -20,23 +22,26 @@ class PageController extends Controller {
         }
 
 
-        return view('pages.index', compact('products', 'blocks','images','footer'));
+        return view('pages.index', compact('products', 'blocks', 'images', 'footer'));
     }
 
     public function install () {
         $blocks = Page::where('id', '=', 3)->first();
         $images = json_decode($blocks->image);
         $footer = Page::where('id', '=', 4)->get();
+        $footer = json_decode($footer->body);
 
 
-        return view('pages.installatie', compact('blocks', 'images','footer'));
+        return view('pages.installatie', compact('blocks', 'images', 'footer'));
     }
 
     public function contact () {
 
         $footer = Page::where('id', '=', 4)->get();
+        $footer = json_decode($footer->body);
 
-        return view('pages.contact',compact('footer'));
+
+        return view('pages.contact', compact('footer'));
     }
 
     public function email (\Symfony\Component\HttpFoundation\Request $request) {
