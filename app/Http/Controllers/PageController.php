@@ -13,7 +13,8 @@ class PageController extends Controller {
         $blocks = Page::where('id', '<=', 2)->get();
         $products = Product::where('homepage', '=', 1)->get();
         $footer = Page::where('id', '=', 4)->get();
-        $footer = json_decode($footer->body);
+        $footer = json_decode($footer);
+        $footer = $footer->body;
 
         $images = [];
 
@@ -30,6 +31,8 @@ class PageController extends Controller {
         $images = json_decode($blocks->image);
         $footer = Page::where('id', '=', 4)->get();
         $footer = json_decode($footer->body);
+        $footer = $footer->body;
+
 
 
         return view('pages.installatie', compact('blocks', 'images', 'footer'));
@@ -39,6 +42,8 @@ class PageController extends Controller {
 
         $footer = Page::where('id', '=', 4)->get();
         $footer = json_decode($footer->body);
+        $footer = $footer->body;
+
 
 
         return view('pages.contact', compact('footer'));
