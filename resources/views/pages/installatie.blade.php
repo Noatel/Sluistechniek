@@ -17,9 +17,12 @@
                 </div>
                 <div class="space-20"></div>
 
+                @if(count($images) > 0)
                 <img src="{{asset('/storage/'. $images[0])}}" class="img-responsive" alt="">
+                @elseif(count($images) > 1)
                 <div class="space-30"></div>
                 <img src="{{asset('/storage/'. $images[1])}}" class="img-responsive" alt="">
+                @endif
 
             </div>
             <div class="col-md-8">
