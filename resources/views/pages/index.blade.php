@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="{{asset('/storage/'. $blocks[0]->image)}}" class="img-responsive" id="homepage_camera" alt="Camera">
+                    <img src="{{asset('/storage/'. $images[0][0] )}}" class="img-responsive" id="homepage_camera" alt="Camera">
                 </div>
                 <div class="space-100 hidden-md hidden-lg"></div>
 
