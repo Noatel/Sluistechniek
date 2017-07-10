@@ -11,8 +11,10 @@ class ProductController extends Controller
 
         $products = Product::all();
         $count = count($products);
-
-        return view('pages.products', compact('products','count'));
+        $footer = Page::where('id', '=', 4)->get();
+        $footer = json_decode($footer);
+        $footer = $footer[0]->body;
+        return view('pages.products', compact('products','count','footer'));
     }
 
     public function view(Product $product)
