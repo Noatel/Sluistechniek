@@ -35,5 +35,4 @@
 
 
 @endsection
-@section('scripts')
 

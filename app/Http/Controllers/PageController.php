@@ -12,11 +12,13 @@ class PageController extends Controller {
     public function index () {
         $blocks = Page::where('id', '<=', 2)->get();
         $products = Product::where('homepage', '=', 1)->get();
+        $footer = Page::where('id', '=', 4)->get();
         $images = [];
 
         foreach ($blocks as $i => $key) {
             $images[$i] = json_decode($key->image);
         }
+
 
         return view('pages.index', compact('products', 'blocks','images'));
     }

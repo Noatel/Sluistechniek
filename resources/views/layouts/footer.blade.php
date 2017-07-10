@@ -21,11 +21,9 @@
                     <li>
                         Over Sluistechniek
                         <div class="space-10"></div>
-                        <ul>
-                            <li>KVK: 2378238234</li>
-                            <li>BTW: 1212131313</li>
-                            <li>Tel: 32323232</li>
-                        </ul>
+                        @if($footer)
+                            {!! $footer !!}
+                        @endif
                     </li>
                 </ul>
             </div>
