@@ -20,8 +20,10 @@ class ProductController extends Controller
 
     public function view(Product $product)
     {
-
-        return view('pages.product-detail', compact('product'));
+        $footer = Page::where('id', '=', 4)->get();
+        $footer = json_decode($footer);
+        $footer = $footer[0]->body;
+        return view('pages.product-detail', compact('product','footer'));
     }
 
     public function search(\Illuminate\Http\Request $request)
