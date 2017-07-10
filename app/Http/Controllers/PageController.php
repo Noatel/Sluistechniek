@@ -20,19 +20,23 @@ class PageController extends Controller {
         }
 
 
-        return view('pages.index', compact('products', 'blocks','images'));
+        return view('pages.index', compact('products', 'blocks','images','footer'));
     }
 
     public function install () {
         $blocks = Page::where('id', '=', 3)->first();
         $images = json_decode($blocks->image);
+        $footer = Page::where('id', '=', 4)->get();
 
-        return view('pages.installatie', compact('blocks', 'images'));
+
+        return view('pages.installatie', compact('blocks', 'images','footer'));
     }
 
     public function contact () {
 
-        return view('pages.contact');
+        $footer = Page::where('id', '=', 4)->get();
+
+        return view('pages.contact',compact('footer'));
     }
 
     public function email (\Symfony\Component\HttpFoundation\Request $request) {
