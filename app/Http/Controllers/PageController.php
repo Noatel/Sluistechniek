@@ -19,7 +19,8 @@ class PageController extends Controller {
         $images = [];
 
         foreach ($blocks as $i => $key) {
-            $images[$i] = json_decode($key->image);
+
+            array_push($images, json_decode($blocks[$i]->image));
         }
 
 

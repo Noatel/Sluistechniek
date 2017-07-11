@@ -96,7 +96,7 @@
             </div>
             <div class="col-md-4 col-md-offset-1">
                 <div class="space-70"></div>
-                <img src="{{asset('/storage/'. $blocks[1]->image)}}" class="img-responsive" alt="Camera">
+                <img src="{{asset('/storage/'. $images[1][0] )}}" class="img-responsive" alt="Camera">
             </div>
         </div>
     </div>
