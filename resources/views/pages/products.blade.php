@@ -48,7 +48,7 @@
                     @forelse($products as $product)
                         <div class="row">
                             <div class="col-md-5 ">
-                                <img src="{{asset('/storage/'.$product->image)}}" class="img-responsive" alt="">
+                                <img src="{{asset('/storage/'.$product->image)}}" class="img-responsive margin-center" alt="{{$product->name}}">
                             </div>
                             <div class="col-md-7 col-md-offset-0 col-xs-offset-1">
                                 <div class="product">

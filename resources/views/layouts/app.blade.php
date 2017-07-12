@@ -53,7 +53,7 @@
                         <li class="list-fade {{ Request::is('/') ? "active" : '' }}"><a
                                     href="{{url('/')}}">Home</a></li>
 
-                        <li class="list-fade {{ Request::is('producten/1') ? "active" : '' }}"><a
+                        <li class="list-fade {{ Request::is('producten') ? "active" : '' }} {{ Request::is('product/*') ? "active" : '' }}"><a
                                     href="{{url('/producten')}}">Producten</a></li>
                         <li class="list-fade {{ Request::is('installatie') ? "active" : '' }}"><a
                                     href="{{url('/installatie')}}">Installatie</a>

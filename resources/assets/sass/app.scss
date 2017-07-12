@@ -1,5 +1,4 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
 // Variables
 @import "variables";
@@ -15,7 +14,7 @@ body {
   background-color: white;
   width: 100%;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .heading {
@@ -41,6 +40,10 @@ body {
     color:white;
     background-color: darken($golden-yellow,10%)
   }
+}
+
+.margin-center {
+  margin: 0 auto;
 }
 
 @import "components/navbar";
