@@ -12,7 +12,17 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => 'Sluis Techniek',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Description
+    |--------------------------------------------------------------------------
+    |
+    |
+    */
+
+    'description' => 'Sluis Techniek is een zelfstandig ondernemer die zijn eigen camera\'s inkoopt en ze tegen een aantrekkelijke prijs verkoopt.',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +87,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'nl',
 
     /*
     |--------------------------------------------------------------------------

@@ -1,7 +1,4 @@
 @extends('layouts.app')
-@section('title', '')
-@section('description','')
-
 @section('header')
     <link rel="stylesheet" type="text/css" href="{{asset('css/slick.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/slick-theme.css')}}"/>

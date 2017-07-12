@@ -1,33 +1,17 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="{{ config('app.locale') }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    @if (stristr(Request::server('DOCUMENT_ROOT'), 'vagrant') !== false || stristr(Request::server('HTTP_HOST'), 'liamboer.nl') !== false)
-        <meta name="robots" content="none">
-    @endif
-    <meta name="csrf-token" content="{{csrf_token()}}">
-    <meta name="description" content="@yield('description')">
-    <title>Sluistechniek.nl </title>
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="sluistechniek.nl @yield('title')">
-    <meta name="twitter:description" content="@yield('description')">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:image" content="">
-    <meta name="twitter:url" content="{{url('')}}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="sluistechniek.nl @yield('title')">
-    <meta property="og:description" content="@yield('description')">
-    <meta property="og:site_name" content="sluistechniek.nl">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="{{url('/')}}">
-    <link href="{{url('/')}}" rel="canonical">
+    <meta name="robots" content="{{(env('APP_ENV') != 'production') ? 'none' : 'index, follow'}}">
+    @include('partials.seo')
 
+    <title>@yield('title')Sluis Techniek</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    <link href="{{asset('css/animate.css')}}" rel="stylesheet">
 
 
     <!--[if lt IE 9]>
@@ -35,6 +19,15 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-72033415-2', 'auto');
+        ga('send', 'pageview');
+    </script>
 
     @yield('header')
 </head>
@@ -83,18 +76,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 @yield('scripts')
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-72033415-2', 'auto');
-    ga('send', 'pageview');
-
-</script>
 <script>
     $('.navbar-toggle').on('click', function () {
         if ($(this).hasClass('toggle-closed')) {

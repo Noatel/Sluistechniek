@@ -1,7 +1,5 @@
 @extends('layouts.app')
-@section('title', '| Dé specialist in jouw favoriete gamecards!')
-@section('description','')
-
+@section('title', 'Contact | ')
 @section('header')
 @endsection
 @section('content')
@@ -112,13 +110,14 @@
 
     <script>
         function initMap() {
-            var uluru = {lat: 51.930728, lng: 4.597929};
+            var pos = {lat: 51.930728, lng: 4.597929};
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 16,
-                center: uluru
+                center: pos,
+                scrollwheel: false
             });
             var marker = new google.maps.Marker({
-                position: uluru,
+                position: pos,
                 map: map
             });
         }

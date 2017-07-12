@@ -19,7 +19,6 @@
             <div class="col-md-3  col-xs-6 col-sm-3 col-sm-push-1 col-md-push-3">
                 <ul>
                     <li>
-                        Over Sluistechniek
                         @if($footer)
                             {!! $footer !!}
                         @endif

@@ -1,11 +1,6 @@
 @extends('layouts.app')
-@section('title', '| Dé specialist in jouw favoriete gamecards!')
-@section('description','')
-
-@section('header')
-@endsection
+@section('title', 'Installatie | ')
 @section('content')
-
     <div class="space-100"></div>
 
     <div class="container">
@@ -32,7 +27,5 @@
         </div>
     </div>
     <div class="space-100"></div>
-
-
 @endsection
 
