@@ -95,7 +95,7 @@
                         <li>Capelle aan den IJssel</li>
                         <li>Gruttosingel 55</li>
                         <li>06-29382003</li>
-                        <li><a href="mailto:info@sluistechniek.nl">info@sluistechniek.nl</a></li>
+                        <li><a href="mailto:sluistechniek@gmail.nl">sluistechniek@gmail.nl</a></li>
                     </ul>
                 </div>
             </div>
