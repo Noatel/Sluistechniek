@@ -31,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-xs-offset-1 col-md-offset-0 col-xs-11">
-                <p>{{$product->extra_description}}</p>
+                <p>{!! nl2br($product->extra_description) !!}</p>
             </div>
         </div>
     </div>
