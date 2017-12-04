@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="{{(env('APP_ENV') != 'production') ? 'none' : 'index, follow'}}">
     @include('partials.seo')
+    <meta name="google-site-verification" content="fM52JnufYc07VlBaeOSu6528fG8OoNrhnxGAu2d8gyI" />
 
     <title>@yield('title')Sluis Techniek</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
