@@ -16,8 +16,10 @@
 </div>
 
 <script>
-    $(".button-telephone").click(function(){
-        var url = "{{url('/contact')}}";
-        window.open(url, '_blank');
-    })
+    if ($(window).width() < 481) {
+        $(".button-telephone").click(function(){
+            var url = "{{url('/contact')}}";
+            window.open(url, '_blank');
+        });
+    }
 </script>
