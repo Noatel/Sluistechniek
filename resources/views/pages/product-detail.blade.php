@@ -36,4 +36,5 @@
         </div>
     </div>
     <div class="space-100"></div>
+    @include('partials.telephone')
 @endsection

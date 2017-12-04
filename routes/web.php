@@ -18,7 +18,7 @@ Route::post('/producten/search', 'ProductController@search');
 Route::get('/product/{product}', 'ProductController@view');
 
 
-Route::get('/installatie', 'PageController@install');
+Route::get('/jablotron', 'PageController@install');
 Route::get('/contact', 'PageController@contact');
 Route::post('/email', 'PageController@email');
 

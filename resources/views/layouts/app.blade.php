@@ -54,9 +54,9 @@
                                     href="{{url('/')}}">Home</a></li>
 
                         <li class="list-fade {{ Request::is('producten') ? "active" : '' }} {{ Request::is('product/*') ? "active" : '' }}"><a
-                                    href="{{url('/producten')}}">Producten</a></li>
-                        <li class="list-fade {{ Request::is('installatie') ? "active" : '' }}"><a
-                                    href="{{url('/installatie')}}">Installatie</a>
+                                    href="{{url('/producten')}}">Camera's</a></li>
+                        <li class="list-fade {{ Request::is('jablotron') ? "active" : '' }}"><a
+                                    href="{{url('/jablotron')}}">Jablotron</a>
                         </li>
                         <li class="list-fade {{ Request::is('contact') ? "active" : '' }}"><a
                                     href="{{url('/contact')}}">Contact</a>

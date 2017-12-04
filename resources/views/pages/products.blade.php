@@ -19,6 +19,18 @@
                                 <label for="usr">Naam</label>
                                 <input type="text" name="name" class="form-control" placeholder="Zoek op productnaam..." id="usr">
                             </div>
+                            <div class="form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="0" id="option1">Dome en Bullet</label>
+                            </div>
+                            </div>
+                            <div class="form-group">
+
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="0" id="option2">NVR en PTZ</label>
+                            </div>
+                            </div>
+
 
                             <div class="space-30"></div>
                             <label for="slider">Prijs</label> <br>
@@ -86,23 +98,32 @@
     <div class="space-100"></div>
 
     <div class="space-100"></div>
-
+    @include('partials.telephone')
 
 @endsection
 @section('scripts')
     <script src="{{asset('js/bootstrap-slider.js')}}"></script>
     <script>
+        $('#option1').on('change', function(){
+            this.value = this.checked ? 1 : 0;
+            // alert(this.value);
+        }).change();
+        $('#option2').on('change', function(){
+            this.value = this.checked ? 1 : 0;
+            // alert(this.value);
+        }).change();
         $("#ex2").slider({});
         $("#search").on('click', function () {
             $("#products").empty();
-
             $('#loadingmessage').show();  // show the loading message.
 
             $.post("/producten/search",
                     {
                         _token: "{{csrf_token()}}",
                         slider: $('#ex2').val(),
-                        name: $('#usr').val()
+                        name: $('#usr').val(),
+                        option_one: $('#option1').val(),
+                        option_two: $('#option2').val()
                     },
                     function (data) {
                         $("#number").html(data.length);
