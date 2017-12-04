@@ -95,13 +95,17 @@ body {
 .telephone-hover{
 margin-left:9px;
   /* Extra Small Devices, Phones */
-  @media only screen and (max-width : 480px) {
+  @media only screen and (-width : 480px) {
     margin-left:0 !important;
 
   }
 
 }
 .dropdown {
+  @media only screen and (max-width : 480px) {
+    width: 100%;
+    right: 34px !important;
+  }
   right:100px !important;
   float: right !important;
   bottom: 205px;

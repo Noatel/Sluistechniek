@@ -9256,7 +9256,7 @@ footer .footer-wrapper span a:active {
   /* Extra Small Devices, Phones */
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (-width: 480px) {
   .telephone-hover {
     margin-left: 0 !important;
   }
@@ -9268,6 +9268,13 @@ footer .footer-wrapper span a:active {
   bottom: 205px;
   position: fixed;
   z-index: 9999;
+}
+
+@media only screen and (max-width: 480px) {
+  .dropdown {
+    width: 100%;
+    right: 34px !important;
+  }
 }
 
 .dropdown span {
