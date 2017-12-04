@@ -16,7 +16,7 @@
 </div>
 
 <script>
-    if ($(window).width() < 481) {
+    if ($(window).width() > 481) {
         $(".button-telephone").click(function(){
             var url = "{{url('/contact')}}";
             window.open(url, '_blank');
