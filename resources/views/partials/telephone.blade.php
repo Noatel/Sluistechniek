@@ -21,5 +21,17 @@
             var url = "{{url('/contact')}}";
             window.open(url, '_blank');
         });
+    } else {
+        var value = 0;
+        $(".button-telephone").click(function(){
+            if(value == 0){
+            $(".dropdown-menu").fadeIn();
+            value = 1
+            } else {
+                $(".dropdown-menu").fadeOut();
+                value = 0;
+            }
+        });
+
     }
 </script>
