@@ -20,26 +20,36 @@
                                 <input type="text" name="name" class="form-control" placeholder="Zoek op productnaam..." id="usr">
                             </div>
                             <div class="form-group">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="0" id="option1">Dome en Bullet</label>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="0" id="option1">Dome</label>
+                                </div>
                             </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="0" id="option2">Bullet</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="0" id="option3">NVR</label>
+                                </div>
                             </div>
                             <div class="form-group">
 
                             <div class="checkbox">
-                                <label><input type="checkbox" value="0" id="option2">NVR en PTZ</label>
+                                <label><input type="checkbox" value="0" id="option4">PTZ</label>
                             </div>
                             </div>
 
 
                             <div class="space-30"></div>
                             <label for="slider">Prijs</label> <br>
-                            <b>€ 0</b> <b class="pull-right">€ 1000</b>
+                            <b>€ 0</b> <b class="pull-right">€ {{$highestProductPrice}}</b>
 
                             <br>
                             <input id="ex2" type="text" class="span2" name="slider" value="" data-slider-min="0"
                                    style="width:100%"
-                                   data-slider-max="1000" data-slider-step="5" data-slider-value="[0,1000]"/>
+                                   data-slider-max="{{$highestProductPrice}}" data-slider-step="5" data-slider-value="[0,{{$highestProductPrice}}]"/>
 
                             <div class="space-50"></div>
                             <button type="button" id="search" class="btn btn-custom">Zoeken</button>
@@ -106,12 +116,17 @@
     <script>
         $('#option1').on('change', function(){
             this.value = this.checked ? 1 : 0;
-            // alert(this.value);
         }).change();
         $('#option2').on('change', function(){
             this.value = this.checked ? 1 : 0;
-            // alert(this.value);
         }).change();
+        $('#option3').on('change', function(){
+            this.value = this.checked ? 1 : 0;
+        }).change();
+        $('#option4').on('change', function(){
+            this.value = this.checked ? 1 : 0;
+        }).change();
+
         $("#ex2").slider({});
         $("#search").on('click', function () {
             $("#products").empty();
@@ -123,7 +138,9 @@
                         slider: $('#ex2').val(),
                         name: $('#usr').val(),
                         option_one: $('#option1').val(),
-                        option_two: $('#option2').val()
+                        option_two: $('#option2').val(),
+                        option_three: $('#option3').val(),
+                        option_four: $('#option4').val()
                     },
                     function (data) {
                         $("#number").html(data.length);
