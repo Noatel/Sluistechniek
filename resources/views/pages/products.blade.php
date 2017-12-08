@@ -40,7 +40,6 @@
                             <input id="ex2" type="text" class="span2" name="slider" value="" data-slider-min="0"
                                    style="width:100%"
                                    data-slider-max="1000" data-slider-step="5" data-slider-value="[0,1000]"/>
-
                             <div class="space-50"></div>
                             <button type="button" id="search" class="btn btn-custom">Zoeken</button>
                         </form>
