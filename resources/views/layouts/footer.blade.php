@@ -11,6 +11,7 @@
                             <li><a href="{{url('/')}}">Home</a></li>
                             <li><a href="{{url('/producten')}}">Producten</a></li>
                             <li><a href="{{url('/installatie')}}">Installatie</a></li>
+                            <li><a href="{{url('/jablotron')}}">Jablotron</a></li>
                             <li><a href="{{url('/contact')}}">Contact</a></li>
                         </ul>
                     </li>
