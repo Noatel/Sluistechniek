@@ -6,7 +6,7 @@
 <div class="dropdown">
         <button class="btn btn-circle dropdown-toggle button-telephone btn-lg" type="submit" data-toggle="dropdown"
                 data-hover="dropdown">
-            <i class="fa fa-phone fa-flip-horizontal fa-1x" aria-hidden="true"></i>
+            <i class="fa fa-phone fa-1x" aria-hidden="true"></i>
         </button>
 
     <ul class="dropdown-menu">

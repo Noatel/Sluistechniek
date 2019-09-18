@@ -50,6 +50,14 @@ class PageController extends Controller {
         return view('pages.contact', compact('footer'));
     }
 
+    public function cart () {
+        $footer = Page::where('id', '=', 4)->get();
+        $footer = json_decode($footer);
+        $footer = $footer[0]->body;
+
+        return view('pages.cart', compact('footer'));
+    }
+
     public function email (\Symfony\Component\HttpFoundation\Request $request) {
 
         $contact = new Contact();

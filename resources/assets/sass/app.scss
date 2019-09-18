@@ -137,7 +137,8 @@ margin-left:9px;
 .button-telephone {
   background-color: $golden-yellow;
   border-color: darken($golden-yellow, 10%);
-  i {
+  color: white;
+  svg {
     color: white;
   }
 
@@ -154,4 +155,8 @@ margin-left:9px;
   bottom: 50px;
   position: fixed;
 
+}
+.fill {
+  min-height: 100%;
+  height: 100%;
 }

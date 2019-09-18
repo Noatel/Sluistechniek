@@ -18,6 +18,9 @@
         color: #333333;
         &:hover, &:focus {
           background-color: white;
+          color: $golden-yellow !important;
+          text-decoration: none;
+
         }
       }
     }
@@ -101,7 +104,6 @@
               font-weight: bold;
               color: $golden-yellow !important;
               text-decoration: none;
-
             }
           }
           &.active {

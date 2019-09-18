@@ -15,12 +15,15 @@ Route::get('/', 'PageController@index');
 
 Route::get('/producten', 'ProductController@index');
 Route::post('/producten/search', 'ProductController@search');
+Route::get('/producten/buy/{product}', 'ProductController@buy');
 Route::get('/product/{product}', 'ProductController@view');
 
 
 Route::get('/jablotron', 'PageController@install');
 Route::get('/contact', 'PageController@contact');
 Route::post('/email', 'PageController@email');
+
+Route::get('/cart', 'PageController@cart');
 
 
 Route::group(['prefix' => 'admin'], function () {

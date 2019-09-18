@@ -11,7 +11,7 @@
             <div class="col-md-6 ">
                 <img src="{{asset('/storage/'.$product->image)}}" class="img-responsive" alt="{{$product->name}}">
             </div>
-            <div class="col-md-6 col-md-offset-0 col-xs-offset-1">
+            <div class="col-md-4 col-md-offset-0 col-xs-offset-1">
                 <div class="product-detail">
                     <div class="hidden-md hidden-lg">
                         <div class="space-50"></div>
@@ -20,14 +20,18 @@
                     <span>&#8364; {{$product->price}}</span>
                     <div class="space-10"></div>
                     <p>{!! nl2br($product->description) !!}</p>
+
+                    <form action="{{url('/product/'. $product->id)}}">
+                        <button type="submit" class="btn btn-custom"><i class="fas fa-shopping-cart"></i> In winkelwagen</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="space-100"></div>
+        <div class="space-10"></div>
         <hr>
     </div>
 
-    <div class="space-100"></div>
+    <div class="space-10"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-xs-offset-1 col-md-offset-0 col-xs-11">

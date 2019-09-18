@@ -8417,6 +8417,8 @@ body {
 .navbar ul li a:hover,
 .navbar ul li a:focus {
   background-color: white;
+  color: #ffc723 !important;
+  text-decoration: none;
 }
 
 @media (max-width: 1034px) {
@@ -8779,6 +8781,13 @@ footer .footer-wrapper span a:active {
 
 .product-detail {
   max-width: 389px;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+.product-detail form {
+  position: absolute;
+  bottom: 0;
 }
 
 .product-detail h1 {
@@ -9305,13 +9314,14 @@ footer .footer-wrapper span a:active {
 .button-telephone {
   background-color: #ffc723;
   border-color: #efb200;
+  color: white;
   float: right;
   right: 50px;
   bottom: 50px;
   position: fixed;
 }
 
-.button-telephone i {
+.button-telephone svg {
   color: white;
 }
 
@@ -9323,5 +9333,10 @@ footer .footer-wrapper span a:active {
 
 .button-telephone:focus {
   outline: 0 !important;
+}
+
+.fill {
+  min-height: 100%;
+  height: 100%;
 }
 

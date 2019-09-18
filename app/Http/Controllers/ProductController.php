@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Page;
 use App\Product;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller {
@@ -16,12 +17,16 @@ class ProductController extends Controller {
         $footer = $footer[0]->body;
 
 
+        $highestProductPrice = DB::table('products')->orderBy('price', 'desc')->first();
 
 
+        if($highestProductPrice == null){
+            $highestProductPrice = 0.00;
+        } else {
+            $highestProductPrice = $highestProductPrice->price;
+        }
 
-        $highestProductPrice = DB::table('products')->orderBy('price','desc')->first();
-        $highestProductPrice = $highestProductPrice->price;
-        return view('pages.products', compact('products', 'count', 'footer','highestProductPrice'));
+        return view('pages.products', compact('products', 'count', 'footer', 'highestProductPrice'));
 
 
     }
@@ -41,13 +46,22 @@ class ProductController extends Controller {
         return view('pages.product-detail', compact('product', 'footer'));
     }
 
+    public function buy (Product $product) {
+
+
+        Cart::add(['id' => $product->id, 'name' => $product->name, 'qty' => 1, 'price' => $product->price]);
+
+
+
+        return Redirect::back()->withErrors(['bought', 'Je item,' . $product->name .' is toegevoegd aan je winkelmandje']);
+    }
+
     public function search (\Illuminate\Http\Request $request) {
         $prices = explode(',', $request->slider);
         $name = $request->name;
 
 
-
-        if ($request->option_one == 0 && $request->option_two  == 0 &&  $request->option_three == 0 && $request->option_four  == 0) {
+        if ($request->option_one == 0 && $request->option_two == 0 && $request->option_three == 0 && $request->option_four == 0) {
             $products = Product::where('name', 'LIKE', '%' . $name . '%')->whereRaw('price >=' . $prices[0])
                 ->whereRaw('price <=' . $prices[1])->get();
 

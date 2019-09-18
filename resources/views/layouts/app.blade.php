@@ -10,7 +10,7 @@
 
     <title>@yield('title')Sluis Techniek</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/animate.css')}}" rel="stylesheet">
 
@@ -61,6 +61,9 @@
                         </li>
                         <li class="list-fade {{ Request::is('contact') ? "active" : '' }}"><a
                                     href="{{url('/contact')}}">Contact</a>
+                        </li>
+                        <li class="list-fade {{ Request::is('cart') ? "active" : '' }}"><a
+                                    href="{{url('/cart')}}"><i class="fas fa-shopping-cart"></i></a>
                         </li>
                     </ul>
                 </div>

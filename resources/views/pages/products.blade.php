@@ -72,7 +72,7 @@
                             <div class="col-md-5 ">
                                 <img src="{{asset('/storage/'.$product->image)}}" class="img-responsive margin-center" alt="{{$product->name}}">
                             </div>
-                            <div class="col-md-7 col-md-offset-0 col-xs-offset-1">
+                            <div class="col-md-6 col-md-offset-0 col-xs-offset-1">
                                 <div class="product">
                                     <div class="hidden-md hidden-lg">
                                         <div class="space-50"></div>
@@ -83,12 +83,18 @@
                                 </div>
                                 <div class="row">
                                     <div class="space-20"></div>
-                                    <div class="col-md-3 col-xs-6"><span
+                                    <div class="col-md-3 col-sm-2 col-xs-3"><span
                                                 class="price">&#8364; {{$product->price}}</span>
                                     </div>
-                                    <div class="col-md-3 col-xs-6">
+                                    <div class="col-md-4 col-sm-2 col-xs-5">
                                         <form action="{{url('/product/'. $product->id)}}">
                                             <button type="submit" class="btn btn-custom">Bekijk product</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-3 col-sm-2 col-xs-push-1 col-xs-4">
+
+                                        <form action="{{url('producten/buy/'. $product->id)}}">
+                                            <button type="submit" class="btn btn-custom"><i class="fas fa-shopping-cart"></i></button>
                                         </form>
                                     </div>
                                 </div>
